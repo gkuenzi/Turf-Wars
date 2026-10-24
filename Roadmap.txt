@@ -1,3 +1,17 @@
 
 POST-TESTING:
     -Reduce starting player coins to 10
+
+Rules:
+    - You can only have one flag in your inventory at a time
+    - You can only place one flag at a time
+
+NOTES:
+    - init wall health: 200
+    - init cannon damage: 20
+    - init weapon damage: 10
+    - init player loss upon hit: 30%
+    - init mine health: 100
+    - init cannon health: 100
+    - init flag health: 10
+    
