@@ -325,28 +325,26 @@ function App() {
         if (x < -2 || x > 102 || y < -2 || y > 102) return;
 
         let hit = false;
-        if (projectile.kind === 'cannon') {
-          const targetIndex = currentPlaced.findIndex((object) => {
-            if (object.side === projectile.side) return false;
-            const dx = (x - object.x) * bounds.width / 100;
-            const dy = (y - object.y) * bounds.height / 100;
-            return Math.hypot(dx, dy) < 23;
-          });
-          if (targetIndex !== -1) {
-            const target = currentPlaced[targetIndex];
-            const health = target.health - projectile.damage;
-            currentPlaced = currentPlaced.slice();
-            if (health <= 0) {
-              currentPlaced.splice(targetIndex, 1);
-              minePayoutAt.current.delete(target.id);
-              cannonFiredAt.current.delete(target.id);
-              announce(target.side, `${target.item.toUpperCase()} DESTROYED`);
-            } else {
-              currentPlaced[targetIndex] = { ...target, health };
-            }
-            placedChanged = true;
-            hit = true;
+        const targetIndex = currentPlaced.findIndex((object) => {
+          if (object.side === projectile.side) return false;
+          const dx = (x - object.x) * bounds.width / 100;
+          const dy = (y - object.y) * bounds.height / 100;
+          return Math.hypot(dx, dy) < 23;
+        });
+        if (targetIndex !== -1) {
+          const target = currentPlaced[targetIndex];
+          const health = target.health - projectile.damage;
+          currentPlaced = currentPlaced.slice();
+          if (health <= 0) {
+            currentPlaced.splice(targetIndex, 1);
+            minePayoutAt.current.delete(target.id);
+            cannonFiredAt.current.delete(target.id);
+            announce(target.side, `${target.item.toUpperCase()} DESTROYED`);
+          } else {
+            currentPlaced[targetIndex] = { ...target, health };
           }
+          placedChanged = true;
+          hit = true;
         }
 
         if (!hit) {
