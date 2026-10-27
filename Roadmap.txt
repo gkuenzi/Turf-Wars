@@ -14,4 +14,11 @@ NOTES:
     - init mine health: 100
     - init cannon health: 100
     - init flag health: 10
-    
+    - mine output: 1 gold every 5 seconds
+    - handgun magazine: 20 bullets; initial weapon damage: 10
+    - handgun upgrade cost: 20 coins per purchase/reload
+    - initial player gold loss: cannon hit 30%; handgun hit 10%
+    - mine output improvement: +1 gold per payout; initial cost 12, cost increases by 2 per upgrade
+    - wall health improvement: +50 health; initial cost 15, cost increases by 5 per upgrade
+    - cannon damage improvement: +2 damage; initial cost 15
+    - weapon damage improvement: +1 damage; initial cost 15, cost increases by 2 per upgrade
