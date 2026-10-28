@@ -933,7 +933,7 @@ function App() {
           <div><span className="eyebrow">TWO SIDES. ONE FIELD.</span><h1>Claim your <em>ground.</em></h1></div>
           <div className="arena-size">
             <span>ARENA</span>
-            <b>EXPANDED FIELD</b>
+            <b>No Man's Land</b>
             <span className="zone-score">
               RED {zoneClaims.filter((claim) => claim === 'top').length}/3
               {' · '}

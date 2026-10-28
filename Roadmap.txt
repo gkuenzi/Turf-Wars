@@ -10,6 +10,10 @@ IDEAS:
     -Currently, players cant take land from already claimed land(Maybe: make land claims permanent)
 
 LATE STAGE IDEAS:
+    -Make more maps (Maps can have obstacles or events that can change the course of the game)
+        - City(Can only place items on streets OR must build roads that connect items for them to activate)
+        - Stormfront(Random weather events)
+        - 
     -Make it controller compatible
     -Make a 2v2 mode (Requires two keyboards or 4 controllers)
 
