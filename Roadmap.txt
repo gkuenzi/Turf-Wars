@@ -1,6 +1,17 @@
+SETTINGS:
+    - Keybinds
+
 
 POST-TESTING:
-    -Reduce starting player coins to 10
+    -Reduce starting player coins to 5 (FIND AT ([gold, setGold]))
+    -Make the flag timer 150 seconds (FIND AT (const FLAG_DURATION))
+
+IDEAS:
+    -Currently, players cant take land from already claimed land(Maybe: make land claims permanent)
+
+LATE STAGE IDEAS:
+    -Make it controller compatible
+    -Make a 2v2 mode (Requires two keyboards or 4 controllers)
 
 Rules:
     - You can only have one flag in your inventory at a time
@@ -13,12 +24,52 @@ NOTES:
     - init player loss upon hit: 30%
     - init mine health: 100
     - init cannon health: 100
-    - init flag health: 10
+    - flag timer: 150 seconds
     - mine output: 1 gold every 5 seconds
     - handgun magazine: 20 bullets; initial weapon damage: 10
     - handgun upgrade cost: 20 coins per purchase/reload
     - initial player gold loss: cannon hit 30%; handgun hit 10%
-    - mine output improvement: +1 gold per payout; initial cost 12, cost increases by 2 per upgrade
-    - wall health improvement: +50 health; initial cost 15, cost increases by 5 per upgrade
-    - cannon damage improvement: +2 damage; initial cost 15
+
+Turf Improvements
+    - mine output improvement: +1 gold per payout; max level 8
+    - wall health improvement: +50 health per level; max level 8
+    - cannon damage improvement: +10 damage per level; max level 8
+    - mine output, wall health, and cannon damage improvement costs per level: 30, 60, 100, 120, 150, 200, 250, 300 coins
+    - each mine, wall, and cannon improvement level increases its item's purchase price by 25%
+    - item stock and deployed items retain the improvement level they had when purchased
     - weapon damage improvement: +1 damage; initial cost 15, cost increases by 2 per upgrade
+
+Level: Color
+    Mine
+        - Level 1: Yellow
+        - Level 2: Teal
+        - Level 3: Purple
+        - Level 4: Green
+        - Level 5: Blue
+        - Level 6: Red
+        - Level 7: Orange
+        - Level 8: Cyan / Purple
+    Wall
+        - Level 1: Orange
+        - Level 2: Teal
+        - Level 3: Purple
+        - Level 4: Green
+        - Level 5: Blue
+        - Level 6: Red
+        - Level 7: Yellow
+        - Level 8: Cyan / Purple / Yellow
+    Cannon
+        - Level 1: Orange
+        - Level 2: Teal
+        - Level 3: Purple
+        - Level 4: Green
+        - Level 5: Blue
+        - Level 6: Red
+        - Level 7: Yellow
+        - Level 8: Cyan / Purple
+
+Zone Control
+    - Board is divided into 5 evenly sized vertical zones
+    - Flags take 15 seconds to claim the zone where they are placed
+    - Flags cannot be placed in the 8% side buffers or the owning team's back buffer
+    - Claiming 3 zones wins the match
